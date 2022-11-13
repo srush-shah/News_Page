@@ -8,6 +8,9 @@ import Hello from "./pages/Hello";
 import Subscription from "./pages/Subscription";
 import NewsDetail from "./pages/NewsDetail";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import ForgetPass from "./pages/ForgetPass";
+import ResetPass from "./pages/ResetPass";
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <Route path="/fetch" element={<Fetch />} />
       <Route path="/detail" element={<NewsDetail />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/resetpass" element={<ResetPass />} />
+      <Route path="/forgetpass" element={<ForgetPass />} />
       <Route path="/subscription" element={<Subscription />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>

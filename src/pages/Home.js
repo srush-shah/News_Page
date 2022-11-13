@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import List from "../components/List";
 import { Navbar } from "../components/Navbar";
 import { useLocation } from "react-router-dom";
+import logo from "../Images/logo.jpeg";
 
 function Home() {
   const location = useLocation();
@@ -22,14 +23,20 @@ function Home() {
               alt={""}
             />{" "}
           </div>
-          <div className="grid grid-cols-1 grid-flow-row overflow-scroll">
+          <div className="grid grid-cols-1 grid-flow-row overflow-scroll content-start">
             <div className="bg-white">
               <h1 className="sticky text-3xl font-bold ml-20 bg-white">
                 Trending
               </h1>
             </div>
-            <List />
-            <List />
+            <div className="grid grid-cols-1 grid-flow-row gap-8 overflow-scroll mx-10 mt-10 -ml-28">
+              <Card data={news[0]} />
+              <Card data={news[1]} />
+              <Card data={news[2]} />
+              <Card data={news[3]} />
+              <Card data={news[4]} />
+              <Card data={news[5]} />
+            </div>
           </div>
         </div>
         <h1 className="ml-12 sticky text-3xl font-bold bg-white my-10">
