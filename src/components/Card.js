@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../Images/favicon.ico";
-// import Heart from "react-animated-heart";
 
 function Card(data) {
   let article = data.data;
-  // const [isClick, setClick] = useState(false);
+  console.log(article);
   return (
     <div class="max-w-2xl mx-auto">
-      <div class="bg-white shadow-md border border-gray-200 rounded-lg w-96 dark:bg-gray-800 dark:border-gray-700 h-72 mb-4">
+      <div class="bg-white shadow-md border border-gray-200 rounded-lg w-72 dark:bg-gray-800 dark:border-gray-700 h-96 mb-4">
         <a href="#">
-          <img class="rounded-t-lg" src={logo} alt="" />
+          <img
+            class="rounded-t-lg h-28 w-full overflow-hidden"
+            src={article.urlToImage}
+            alt={article.description}
+          />
         </a>
         <div class="p-5">
           <a href="#">
@@ -20,8 +24,9 @@ function Card(data) {
           <p class="font-normal text-gray-700 mb-3 dark:text-gray-400 overflow-clip truncate h-12">
             {article.description}
           </p>
-          <a
-            href="#"
+          <Link
+            to={"/detail"}
+            state={article}
             class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Read more
@@ -37,8 +42,7 @@ function Card(data) {
                 clip-rule="evenodd"
               ></path>
             </svg>
-          </a>
-          {/* <Heart isClick={isClick} onClick={() => setClick(!isClick)} /> */}
+          </Link>
         </div>
       </div>
     </div>
