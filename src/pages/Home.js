@@ -34,7 +34,7 @@ function Home() {
   const getFinance = () => {
     axios
       .get(
-        `https://newsapi.org/v2/everything?q=finance&apikey=${env.process.REACT_APP_API_KEY}`
+        "https://newsapi.org/v2/everything?q=finance&apikey=0e5983ac19b24025af491e33312389b2"
       )
       .then((response) => {
         setFinance(response.data.articles);
@@ -47,7 +47,7 @@ function Home() {
   const getTrending = () => {
     axios
       .get(
-        `https://newsapi.org/v2/top-headlines?country=us&apikey=${env.process.REACT_APP_API_KEY}`
+        "https://newsapi.org/v2/top-headlines?country=us&apikey=0e5983ac19b24025af491e33312389b2"
       )
       .then((response) => {
         setTrending(response.data.articles);
