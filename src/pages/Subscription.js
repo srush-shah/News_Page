@@ -61,8 +61,11 @@ function Subscription() {
                 </span>
                 Like & Comment
               </p>
-              <button class="flex items-center mt-auto text-white bg-green-500 border-0 py-2 px-4 w-2/3 focus:outline-none hover:bg-gray-500 rounded">
-                Subscribe Now
+              <Link
+                to="/#top"
+                class="flex items-center mt-auto text-white bg-green-500 border-0 py-2 px-4 w-2/3 focus:outline-none hover:bg-gray-500 rounded"
+              >
+                Try for Free
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -74,7 +77,7 @@ function Subscription() {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-              </button>
+              </Link>
               <p class="text-xs text-gray-500 mt-3">
                 Literally you probably haven't heard of them jean shorts.
               </p>
@@ -199,7 +202,7 @@ function Subscription() {
           <div class="p-4 w-96">
             <div class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
               <h2 class="text-sm tracking-widest title-font mb-1 font-medium">
-                BUSINESS
+                PREMIMUM PRO
               </h2>
               <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
                 <span>₹3,999</span>

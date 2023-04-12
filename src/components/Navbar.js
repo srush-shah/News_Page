@@ -111,7 +111,7 @@ export function Navbar() {
           </div>
         </div>
       </nav>
-      <div className=" text-center mt-4 ">
+      <div className=" text-center mt-4 -ml-8 ">
         {/* <button className={`${isactive ? "active" : ""} px-2`}>
                   #news
                 </button> */}
