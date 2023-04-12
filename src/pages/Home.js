@@ -7,7 +7,6 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { GrClose } from "react-icons/gr";
 import axios from "axios";
 import { Link } from "react-router-dom";
-require('dotenv').config()
 
 function Home() {
   const location = useLocation();
