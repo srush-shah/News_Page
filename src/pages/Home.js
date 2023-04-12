@@ -7,6 +7,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { GrClose } from "react-icons/gr";
 import axios from "axios";
 import { Link } from "react-router-dom";
+require('dotenv').config()
 
 function Home() {
   const location = useLocation();
@@ -34,7 +35,7 @@ function Home() {
   const getFinance = () => {
     axios
       .get(
-        "https://newsapi.org/v2/everything?q=finance&apikey=4ee6b0eaa4d2426784d1be5b1ba87a39"
+        `https://newsapi.org/v2/everything?q=finance&apikey=${env.process.REACT_APP_API_KEY}`
       )
       .then((response) => {
         setFinance(response.data.articles);
@@ -47,7 +48,7 @@ function Home() {
   const getTrending = () => {
     axios
       .get(
-        "https://newsapi.org/v2/top-headlines?country=us&apikey=4ee6b0eaa4d2426784d1be5b1ba87a39"
+        `https://newsapi.org/v2/top-headlines?country=us&apikey=${env.process.REACT_APP_API_KEY}`
       )
       .then((response) => {
         setTrending(response.data.articles);
